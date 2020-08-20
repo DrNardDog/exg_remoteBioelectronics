@@ -3,7 +3,7 @@ void draw() {
  // **** Menu bar **** // 
  
  fill(128);
- rect(0, 0, width-1, menuBarW);
+ rect(0, 0, width-1, menuBarH);
  
  // **** Graph of data from serial connection **** //
  

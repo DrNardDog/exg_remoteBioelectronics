@@ -23,7 +23,7 @@ boolean showGraph = false;
 boolean showText = false;
 
 final int fntSize = 10;
-final int menuBarW = 65;
+final int menuBarH = 65;
 
 color black = color(0,0,0);
 color gray = color(0, 160, 100);
@@ -59,6 +59,6 @@ String getDateTime() {
 
 public void settings() {
   
-  size(900, 450);
+  size(900, 340);
 
 }

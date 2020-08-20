@@ -7,7 +7,7 @@ void serialEvent (Serial port) {
 
  String inStr = str(inByte)+",\n"; // aommas added if data displayed and/or saved to file
 
- yIn = height - inByte;
+ yIn = height - inByte - 10;
  if(showText == true) {valueFld.append(inStr);}
 
 }

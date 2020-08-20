@@ -101,7 +101,7 @@ void setup() {
    
  valueFld = cp5.addTextarea("Value")
      .setPosition(780,3)
-     .setSize(50, menuBarW - 6)
+     .setSize(50, menuBarH - 6)
      .setColorBackground(0)
      .setFont(font)
      .setLineHeight(14);
