@@ -13,7 +13,7 @@ void setup() {
 
   sbi(ADCSRA, ADPS2);
   cbi(ADCSRA, ADPS1); 
-  cbi(ADCSRA, ADPS0); // DIV16
+  cbi(ADCSRA, ADPS0); // prescaler = DIV16
 
   Serial.begin(115200);
 
@@ -24,7 +24,7 @@ void loop(){
 
    LoopTimer += LoopTime;
    sensorValue = analogRead(analogInPin);            
-   sensorValue = sensorValue >> 2;
+   sensorValue = sensorValue >> 2; // 10-bit to byte for transfer
    Serial.write(sensorValue);
    Serial.flush();
   
