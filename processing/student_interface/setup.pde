@@ -1,12 +1,20 @@
 void setup() {
  
  if (frame != null) {
+   
    surface.setResizable(true);
+ 
  }
+ 
  background(black);
  
  cp5 = new ControlP5(this);
- font = createFont("SourceCodePro-Regular.tif", fntSize);
+ 
+ //String[] fontList = PFont.list();
+ //printArray(fontList);
+ 
+ font = createFont("Verdana", fntSize);
+ 
  String[] ports = Serial.list();
  List p = Arrays.asList(ports);
  
@@ -108,4 +116,5 @@ void setup() {
      .setPosition(width-60,3)
      .setFont(font)
      .setSize(50,19);
+     
 }

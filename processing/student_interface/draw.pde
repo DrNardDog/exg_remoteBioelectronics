@@ -1,6 +1,6 @@
 void draw() {
  
- // **** Menu Bar **** // 
+ // **** Menu bar **** // 
  
  fill(128);
  rect(0, 0, width-1, menuBarW);
