@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit)) //macro to clear bit in special function register
-#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))  //macro to set bit in special function register
+#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit)) // macro to clear bit in register
+#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))  // macro to set bit in register
 
 const int analogInPin = A0;
 int sensorValue = 0;
