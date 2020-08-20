@@ -1,15 +1,22 @@
 #include <Arduino.h>
 
-const int analogInPin = A0;
-unsigned long LoopTimer = 0;
+#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit)) //macro to clear bit in special function register
+#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))  //macro to set bit in special function register
 
+const int analogInPin = A0;
 int sensorValue = 0;
 
-const int LoopTime = 1000;
+unsigned long LoopTimer = 0;
+const int LoopTime = 300; // was 1000
 
-void setup() 
-{
+void setup() {
+
+  sbi(ADCSRA, ADPS2);
+  cbi(ADCSRA, ADPS1); 
+  cbi(ADCSRA, ADPS0); // DIV16
+
    Serial.begin(115200);
+
 }
 
 void loop()
