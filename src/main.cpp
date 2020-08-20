@@ -13,7 +13,7 @@ void setup() {
 
   sbi(ADCSRA, ADPS2);
   cbi(ADCSRA, ADPS1); 
-  cbi(ADCSRA, ADPS0); // prescaler = DIV16
+  sbi(ADCSRA, ADPS0); // clear for prescaler = DIV16, set for DIV32
 
   Serial.begin(115200);
 
