@@ -1,1 +1,1 @@
-# es53_remote_bioelectronics
+# Remote Bioelectronics for ES 53 - Fall 2020
