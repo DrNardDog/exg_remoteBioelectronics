@@ -15,18 +15,18 @@ void setup() {
   cbi(ADCSRA, ADPS1); 
   cbi(ADCSRA, ADPS0); // DIV16
 
-   Serial.begin(115200);
+  Serial.begin(115200);
 
 }
 
-void loop()
-{
-  if (micros() > LoopTimer)
-  {
+void loop(){
+  if (micros() > LoopTimer) {
+
    LoopTimer += LoopTime;
    sensorValue = analogRead(analogInPin);            
    sensorValue = sensorValue >> 2;
    Serial.write(sensorValue);
    Serial.flush();
+  
   }
 }
