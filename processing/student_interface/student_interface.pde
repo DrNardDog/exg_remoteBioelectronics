@@ -17,8 +17,3 @@ Instructions for connection:
 Please do not modify the code in the tabs above. If you happen to, you can always retrieve a fresh copy from Canvas. 
 
 */
-
-
-
-
-     
