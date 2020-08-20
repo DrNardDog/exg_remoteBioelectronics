@@ -11,6 +11,8 @@ const int LoopTime = 300; // was 1000
 
 void setup() {
 
+  analogReference(DEFAULT);
+
   sbi(ADCSRA, ADPS2);
   cbi(ADCSRA, ADPS1); 
   sbi(ADCSRA, ADPS0); // clear for prescaler = DIV16, set for DIV32
