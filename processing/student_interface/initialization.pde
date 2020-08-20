@@ -22,6 +22,7 @@ int baudRate;
 int[] baud = {115200};
 int itemSelected;
 
+int scalar = 2;
 int index = 0;
 int counter = 0;
 int count = 0;

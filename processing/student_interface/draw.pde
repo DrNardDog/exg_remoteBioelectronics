@@ -4,7 +4,7 @@ void draw() {
  rect(0, 0, width-1, menuBarW);
  // **** Graph of data from serial connection **** //
  if (connected && showGraph){
-   if (count > width) {
+   if (count > width/scalar) {
     count = 0;
     background(black);
     }  
@@ -13,7 +13,7 @@ void draw() {
      y1 = yIn;
     }  
    if (count > 0) {
-     x2 = count;
+     x2 = scalar*count;
      y2 = yIn;
      stroke(255);
      line(x1, y1, x2, y2);
