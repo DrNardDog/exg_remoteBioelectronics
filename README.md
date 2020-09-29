@@ -1,6 +1,6 @@
-# Remote Bioelectronics for ES 53 - Fall 2020
+# Remote Bioelectronics for ES 53 and 157 - Fall 2020
 
-Code for EMG / ECG labs in remote offering of ES 53, for use with Arduino UNO and Olimex shields
+Code for EMG / ECG labs in remote offerings of ES 53 and ES 157, for use with Arduino UNO and Olimex shields
 
 There are two separate but related elements in this repo:
 
