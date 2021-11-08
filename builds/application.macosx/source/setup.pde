@@ -1,5 +1,7 @@
 void setup() {
  
+ y = new IntList(); 
+  
  if (frame != null) {
    
    surface.setResizable(true);

@@ -138,7 +138,7 @@ public void Baud(int n) {
 
 public void EmptyArray() {
   
-  y = new int[0];
+  y.clear();
 
 }
 
@@ -167,15 +167,16 @@ public void Save() {
   
   String dateTimeStr = getDateTime();
   String fileToSave = dateTimeStr+".txt";
-  String[] data = new String[y.length];
+  String[] data = new String[y.size()];
   
-  for (int i = 0; i < y.length; i++) {
+  for (int i = 0; i < y.size(); i++) {
   
-    data[i] = y[i]+",";
+    data[i] = y.get(i)+",";
   
   }
   
   saveStrings(fileToSave, data);
+  y.clear();
   logFld.setText("data was saved to a file in app folder");
 
 }
@@ -288,7 +289,7 @@ float yIn;
 float x1, y1, x2, y2;
 float x3, y3, x4, y4;
 
-int[] y = new int[0];
+IntList y;
 
 public String getDateTime() {
   
@@ -317,16 +318,19 @@ public void settings() {
 public void serialEvent (Serial port) {
   
  int inByte = port.read();
- y = append(y,inByte);
-
- String inStr = str(inByte)+",\n"; // aommas added if data displayed and/or saved to file
-
+ y.append(inByte);
  yIn = height - inByte - 10;
- if(showText == true) {valueFld.append(inStr);}
+ 
+ if(showText == true) {
+   String inStr = str(inByte)+",\n"; 
+   valueFld.append(inStr);
+ }
 
 }
 public void setup() {
  
+ y = new IntList(); 
+  
  if (frame != null) {
    
    surface.setResizable(true);
