@@ -24,7 +24,7 @@ void Baud(int n) {
 
 void EmptyArray() {
   
-  y = new int[0];
+  y.clear();
 
 }
 
@@ -53,15 +53,16 @@ void Save() {
   
   String dateTimeStr = getDateTime();
   String fileToSave = dateTimeStr+".txt";
-  String[] data = new String[y.length];
+  String[] data = new String[y.size()];
   
-  for (int i = 0; i < y.length; i++) {
+  for (int i = 0; i < y.size(); i++) {
   
-    data[i] = y[i]+",";
+    data[i] = y.get(i)+",";
   
   }
   
   saveStrings(fileToSave, data);
+  y.clear();
   logFld.setText("data was saved to a file in app folder");
 
 }
